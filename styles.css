@@ -1,0 +1,333 @@
+:root {
+  color-scheme: dark;
+  --bg: #070707;
+  --ink: #f3f0df;
+  --muted: #b9b09d;
+  --hot: #ff3b8d;
+  --acid: #d6ff00;
+  --cyan: #00e5ff;
+  --rust: #ff6a2a;
+  --panel: rgba(243, 240, 223, 0.08);
+  --line: rgba(243, 240, 223, 0.22);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  color: var(--ink);
+  font-family: ui-monospace, "SFMono-Regular", "Roboto Mono", Consolas, monospace;
+  background:
+    linear-gradient(135deg, rgba(255, 59, 141, 0.12), transparent 26rem),
+    radial-gradient(circle at 85% 8%, rgba(0, 229, 255, 0.24), transparent 18rem),
+    repeating-linear-gradient(0deg, rgba(243, 240, 223, 0.04) 0 1px, transparent 1px 13px),
+    var(--bg);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 5rem 5rem;
+  mask-image: linear-gradient(to bottom, black, transparent 78%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 1.5rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 86vh;
+  display: grid;
+  align-content: center;
+  padding: 5rem clamp(1rem, 5vw, 4rem);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(120deg, rgba(7, 7, 7, 0.86), rgba(7, 7, 7, 0.48)),
+    repeating-linear-gradient(-8deg, transparent 0 1.15rem, rgba(214, 255, 0, 0.12) 1.15rem 1.35rem);
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+}
+
+.hero::after {
+  position: absolute;
+  right: -2rem;
+  bottom: -1.8rem;
+  content: "D&R";
+  color: transparent;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(8rem, 26vw, 20rem);
+  line-height: 0.75;
+  -webkit-text-stroke: 2px rgba(255, 59, 141, 0.65);
+  transform: rotate(-5deg);
+}
+
+.stamp,
+.section-label,
+.kicker {
+  color: var(--acid);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(0.72rem, 1.6vw, 0.9rem);
+}
+
+.stamp {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--acid);
+  transform: rotate(-1.5deg);
+  background: rgba(7, 7, 7, 0.86);
+}
+
+.kicker {
+  margin: 0 0 1rem;
+  color: var(--cyan);
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 11ch;
+  margin-bottom: 1rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(4rem, 13vw, 10.5rem);
+  line-height: 0.82;
+  letter-spacing: -0.06em;
+  text-transform: uppercase;
+  text-shadow: 0.05em 0.04em 0 var(--hot), -0.035em -0.025em 0 var(--cyan);
+}
+
+.lede {
+  position: relative;
+  z-index: 1;
+  max-width: 43rem;
+  margin-bottom: 2rem;
+  color: var(--ink);
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.actions {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.actions a,
+footer a {
+  border: 1px solid currentColor;
+  padding: 0.8rem 1rem;
+  background: rgba(7, 7, 7, 0.8);
+}
+
+.actions a:first-child {
+  color: #070707;
+  border-color: var(--acid);
+  background: var(--acid);
+  box-shadow: 0.35rem 0.35rem 0 var(--hot);
+}
+
+.manifesto,
+.signal,
+.grid {
+  margin-top: 1rem;
+}
+
+.manifesto {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.8fr) 1.2fr;
+  gap: 1.5rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid var(--line);
+  background: rgba(255, 106, 42, 0.13);
+}
+
+.manifesto h2,
+.signal h2,
+.grid h2 {
+  margin-bottom: 0.75rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.manifesto p,
+.signal li,
+.grid p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+article,
+.signal {
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+article {
+  min-height: 21rem;
+  padding: 1.25rem;
+}
+
+article:nth-child(2) {
+  transform: translateY(1.5rem) rotate(0.7deg);
+}
+
+article:nth-child(3) {
+  transform: rotate(-0.8deg);
+}
+
+article span {
+  display: inline-block;
+  margin-bottom: 3.5rem;
+  color: var(--hot);
+  font-weight: 800;
+}
+
+.signal {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background:
+    linear-gradient(90deg, rgba(0, 229, 255, 0.12), transparent),
+    var(--panel);
+}
+
+.signal ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  list-style: none;
+}
+
+.signal li {
+  padding-left: 1.25rem;
+  border-left: 0.35rem solid var(--rust);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+footer a {
+  padding: 0.45rem 0.65rem;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 0.5rem;
+  }
+
+  .hero {
+    min-height: 92vh;
+    padding: 6rem 1rem 2rem;
+  }
+
+  .hero::after {
+    opacity: 0.42;
+  }
+
+  .manifesto,
+  .grid,
+  .signal ul,
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    display: block;
+  }
+
+  article,
+  article:nth-child(2),
+  article:nth-child(3) {
+    min-height: auto;
+    margin-top: 1rem;
+    transform: none;
+  }
+
+  article span {
+    margin-bottom: 1.5rem;
+  }
+
+  footer {
+    display: grid;
+    align-items: start;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero {
+    animation: twitch 8s steps(1) infinite;
+  }
+
+  @keyframes twitch {
+    0%, 91%, 100% {
+      filter: none;
+    }
+
+    92% {
+      filter: hue-rotate(8deg) contrast(1.2);
+    }
+
+    93% {
+      filter: none;
+    }
+  }
+}
