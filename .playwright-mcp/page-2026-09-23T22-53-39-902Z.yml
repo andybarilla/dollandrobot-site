@@ -1,0 +1,59 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]: dollandrobot.com // est. now-ish
+    - paragraph [ref=e5]: Apps / AI systems / consulting / useful miscellany
+    - heading "Doll & Robot Labs LLC" [level=1] [ref=e6]
+    - paragraph [ref=e7]: "Small-batch software from Andy Barilla: pragmatic apps, agent-assisted workflows, and systems that solve the problem without joining a parade."
+    - generic "Primary links" [ref=e8]:
+      - link "Start a conversation" [ref=e9] [cursor=pointer]:
+        - /url: mailto:andy@dollandrobot.com
+      - link "Meet Andy" [ref=e10] [cursor=pointer]:
+        - /url: https://andybarilla.com/
+    - text: D&R
+  - region [ref=e11]:
+    - generic [ref=e12]:
+      - paragraph [ref=e13]: working posture
+      - heading "We code econo." [level=2] [ref=e14]
+    - paragraph [ref=e15]: Use what already works. Keep exits open. Build the part that is yours. Doll & Robot Labs is for fast-moving work where judgment matters more than ceremony and the right answer is usually smaller than the industry default.
+  - region "What Doll and Robot Labs does" [ref=e16]:
+    - article [ref=e17]:
+      - generic [ref=e18]: "01"
+      - heading "App Work" [level=2] [ref=e19]
+      - paragraph [ref=e20]: Product prototypes, internal tools, and focused web apps built with the shortest honest path from idea to shipped behavior.
+    - article [ref=e21]:
+      - generic [ref=e22]: "02"
+      - heading "AI Systems" [level=2] [ref=e23]
+      - paragraph [ref=e24]: LLM pipelines, agent workflows, document-heavy automation, and the boring glue that turns model output into dependable production work.
+    - article [ref=e25]:
+      - generic [ref=e26]: "03"
+      - heading "Consulting" [level=2] [ref=e27]
+      - paragraph [ref=e28]: Architecture, delivery strategy, technical due diligence, and senior engineering help for teams trying to cut through expensive noise.
+  - region [ref=e29]:
+    - generic [ref=e30]:
+      - paragraph [ref=e31]: now shipping
+      - heading "Bandependent" [level=2] [ref=e32]
+    - generic [ref=e33]:
+      - paragraph [ref=e34]: Where a band keeps its songs, its takes, and its setlists, and pulls them up on stage, offline. Shared recordings library, setlists the whole band edits, and a public page for bookers. In closed beta.
+      - link "bandependent.com →" [ref=e35] [cursor=pointer]:
+        - /url: https://bandependent.com/
+  - region [ref=e36]:
+    - paragraph [ref=e37]: house rules
+    - heading "Less cosplay. More working software." [level=2] [ref=e38]
+    - list [ref=e39]:
+      - listitem [ref=e40]: Monolith until reality earns the distributed system.
+      - listitem [ref=e41]: Managed services when they buy back time without owning the exit.
+      - listitem [ref=e42]: Plain code over magic when humans and agents both need to reason.
+      - listitem [ref=e43]: Compliance, reliability, and boring rigor when the stakes demand it.
+  - generic [ref=e44]:
+    - paragraph [ref=e45]: Doll & Robot Labs LLC
+    - navigation "Footer links" [ref=e46]:
+      - link "andy@dollandrobot.com" [ref=e47] [cursor=pointer]:
+        - /url: mailto:andy@dollandrobot.com
+      - link "We Code Econo" [ref=e48] [cursor=pointer]:
+        - /url: https://andybarilla.substack.com/p/we-code-econo
+      - link "GitHub" [ref=e49] [cursor=pointer]:
+        - /url: https://github.com/andybarilla
+      - link "Status" [ref=e50] [cursor=pointer]:
+        - /url: https://status.dollandrobot.com/
+      - link "Privacy" [ref=e51] [cursor=pointer]:
+        - /url: privacy.html

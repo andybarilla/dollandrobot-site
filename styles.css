@@ -158,12 +158,14 @@ footer a {
 }
 
 .manifesto,
+.product,
 .signal,
 .grid {
   margin-top: 1rem;
 }
 
-.manifesto {
+.manifesto,
+.product {
   display: grid;
   grid-template-columns: minmax(12rem, 0.8fr) 1.2fr;
   gap: 1.5rem;
@@ -173,6 +175,7 @@ footer a {
 }
 
 .manifesto h2,
+.product h2,
 .signal h2,
 .grid h2 {
   margin-bottom: 0.75rem;
@@ -184,11 +187,29 @@ footer a {
 }
 
 .manifesto p,
+.product p,
 .signal li,
 .grid p {
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.65;
+}
+
+.product {
+  margin-top: 2.5rem;
+  background: rgba(255, 59, 141, 0.12);
+}
+
+.product h2 {
+  font-size: clamp(2rem, 4.2vw, 3.25rem);
+  overflow-wrap: anywhere;
+}
+
+.product a {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--hot);
+  color: var(--hot);
 }
 
 .grid {
@@ -284,6 +305,7 @@ footer a {
   }
 
   .manifesto,
+  .product,
   .grid,
   .signal ul,
   footer {
